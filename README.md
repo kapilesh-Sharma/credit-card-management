@@ -26,8 +26,20 @@ The above command will run Spring boot application in its default tomcat contain
 
 
 ## API Endpoints
+Application has Spring Basic-Authentication security configured so apart from Health check URL all other Resource endpoint are secured and should provide valid - Basic Auth **Username and Password**.
 * **Health check** - http://localhost:8080/actuator/health
 * Functionality - To check if API is up and running 
+
+* **Security Configuration** 
+
+    Type - Basic auth                                                                                                                                                                                                               
+    User name - **user**                                        
+    Password - **password**
+    
+    CURL code for the reference -   
+    curl --location --request GET 'http://localhost:8080/api/v1/credit-cards' \
+    --header 'Authorization: Basic dXNlcjpwYXNzd29yZA==' \
+    --header 'Cookie: JSESSIONID=9890972B935C65880000040F527D3074'
 
 * **GET** - http://localhost:8080/api/v1/credit-cards
 * Functionality - Display all the available credit card records in the database
