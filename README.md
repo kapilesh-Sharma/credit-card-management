@@ -22,7 +22,10 @@ From command prompt run -
         
          mvn spring-boot:run
 
-The above command will run Spring boot application in its default tomcat container
+The above command will run Spring boot application in its default tomcat container.
+In order to run and test application locally a Postman collection which is preloaded with configuration and data has been added under static folder with name -
+**credit-card-management.postman_collection.json**
+
 
 
 ## API Endpoints
